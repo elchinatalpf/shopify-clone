@@ -3,6 +3,9 @@
 # dependencies
 /node_modules
 /.pnp
+# Dependencies
+node_modules/
+.pnp
 .pnp.*
 .yarn/*
 !.yarn/patches
@@ -25,6 +28,18 @@
 *.pem
 
 # debug
+# Testing
+/coverage
+.nyc_output/
+
+# Next.js
+/.next/
+/out/
+/build
+/dist
+
+# Production
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -42,3 +57,43 @@ next-env.d.ts
 
 # local files
 .claude
+# Environment variables (CRITICAL - NEVER COMMIT!)
+.env
+.env*.local
+.env.development
+.env.production
+# But allow .env.example
+!.env.example
+
+# Vercel
+.vercel
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+*.pem
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Prisma (will add later)
+prisma/migrations/
+prisma/dev.db
+prisma/dev.db-journal
+*.db
+*.db-journal
+
+# Personal Claude settings (keep commands/hooks in git)
+.claude/settings.local.json
+
+# Optional: Personal working notes
+# *-scratch.md
+# *-notes.md
