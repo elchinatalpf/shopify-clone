@@ -42,3 +42,6 @@ next-env.d.ts
 
 # local files
 .claude
+
+# Prisma
+prisma/migrations/

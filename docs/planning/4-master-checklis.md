@@ -49,10 +49,10 @@
 **Goal:** Get a working Next.js app with all tools configured  
 **Time:** 3-5 hours
 
-- [ ] **Initialize Next.js Project**
-  - [ ] Run `npx create-next-app@latest shopify-clone`
-  - [ ] Choose: TypeScript âœ…, ESLint âœ…, Tailwind âœ…, App Router âœ…, src/ directory âœ…
-  - [ ] Test: `npm run dev` works
+- [x] **Initialize Next.js Project**
+  - [x] Run `npx create-next-app@latest shopify-clone`
+  - [x] Choose: TypeScript &, ESLint &, Tailwind &, App Router &, src/ directory &x`
+  - [x] Test: `npm run dev` works
 
 - [ ] **Install Core Dependencies**
   - [ ] `npm install @auth0/nextjs-auth0`
