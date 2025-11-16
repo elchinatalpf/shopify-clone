@@ -458,10 +458,10 @@ Installing devDependencies:
 Success! Created shopify-clone at /path/to/shopify-clone
 ```
 
-- [ ] Next.js project initialized
-- [ ] TypeScript configured
-- [ ] Tailwind CSS configured
-- [ ] ESLint configured
+- [x] Next.js project initialized
+- [x] TypeScript configured
+- [x] Tailwind CSS configured
+- [x] ESLint configured
 
 ---
 
@@ -486,8 +486,8 @@ Open browser to `http://localhost:3000` - you should see the Next.js welcome pag
 
 **Stop the server:** `Ctrl+C`
 
-- [ ] Development server runs successfully
-- [ ] Next.js welcome page displays
+- [x] Development server runs successfully
+- [x] Next.js welcome page displays
 
 ---
 
@@ -510,7 +510,7 @@ Find and update these settings:
 }
 ```
 
-- [ ] TypeScript strict mode enabled
+- [x] TypeScript strict mode enabled
 
 ---
 
