@@ -529,7 +529,7 @@ prisma/dev.db-journal
 *.db-journal
 ```
 
-- [ ] `.gitignore` updated with database files
+- [X] `.gitignore` updated with database files
 
 ---
 
@@ -541,7 +541,7 @@ git commit -m "chore: initialize Next.js 15 project with TypeScript and Tailwind
 git push origin main
 ```
 
-- [ ] Next.js initialization committed and pushed
+- [X] Next.js initialization committed and pushed
 
 ---
 
@@ -560,7 +560,7 @@ npm list @auth0/nextjs-auth0
 
 Expected: `@auth0/nextjs-auth0@3.x.x`
 
-- [ ] Auth0 SDK installed
+- [X] Auth0 SDK installed
 
 ---
 
@@ -577,8 +577,8 @@ npm install -D prisma
 npm list @supabase/supabase-js prisma @prisma/client
 ```
 
-- [ ] Supabase client installed
-- [ ] Prisma installed
+- [x] Supabase client installed
+- [x] Prisma installed
 
 ---
 
@@ -596,7 +596,7 @@ npm list @tanstack/react-query
 
 Expected: `@tanstack/react-query@5.x.x`
 
-- [ ] TanStack Query installed
+- [x] TanStack Query installed
 
 ---
 
@@ -613,8 +613,8 @@ npm install zod
 npm list react-hook-form zod
 ```
 
-- [ ] React Hook Form installed
-- [ ] Zod installed
+- [x] React Hook Form installed
+- [x] Zod installed
 
 ---
 
@@ -629,7 +629,7 @@ npm install next-cloudinary
 npm list next-cloudinary
 ```
 
-- [ ] Cloudinary SDK installed
+- [x] Cloudinary SDK installed
 
 ---
 
@@ -643,8 +643,8 @@ npm install sonner
 npm install clsx
 ```
 
-- [ ] Sonner (toast notifications) installed
-- [ ] clsx (utility) installed
+- [x] Sonner (toast notifications) installed
+- [x] clsx (utility) installed
 
 ---
 
@@ -673,8 +673,8 @@ npm list --depth=0
 ├── zod@3.x.x
 ```
 
-- [ ] All core dependencies installed
-- [ ] No installation errors
+- [x] All core dependencies installed
+- [x] No installation errors
 
 ---
 
@@ -686,7 +686,7 @@ git commit -m "chore(deps): install core dependencies (Auth0, Supabase, Prisma, 
 git push origin main
 ```
 
-- [ ] Dependencies committed and pushed
+- [x] Dependencies committed and pushed
 
 ---
 
@@ -746,7 +746,7 @@ CLOUDINARY_API_SECRET='your_api_secret'
 NODE_ENV='development'
 ```
 
-- [ ] `.env.local` file created
+- [x] `.env.local` file created
 
 ---
 
@@ -762,7 +762,7 @@ openssl rand -hex 32
 
 Example output: `a8f2d9e4b7c3a1f6e8d2b5c9a4f7e3d1b6c8a2f5e9d4b7c3a6f8e1d5b9c2a4f7`
 
-- [ ] AUTH0_SECRET generated and added
+- [x] AUTH0_SECRET generated and added
 
 ---
 
@@ -798,8 +798,8 @@ http://localhost:3000
    - **Client ID** → `AUTH0_CLIENT_ID`
    - **Client Secret** → `AUTH0_CLIENT_SECRET`
 
-- [ ] Auth0 application configured
-- [ ] Auth0 credentials added to `.env.local`
+- [x] Auth0 application configured
+- [x] Auth0 credentials added to `.env.local`
 
 ---
 
@@ -826,8 +826,8 @@ Example:
 postgresql://postgres:your_actual_password@db.abcdefghijk.supabase.co:5432/postgres
 ```
 
-- [ ] Supabase URL and keys added
-- [ ] Database URL configured
+- [x] Supabase URL and keys added
+- [x] Database URL configured
 
 ---
 
@@ -841,7 +841,7 @@ postgresql://postgres:your_actual_password@db.abcdefghijk.supabase.co:5432/postg
    - **API Key** → `CLOUDINARY_API_KEY`
    - **API Secret** → `CLOUDINARY_API_SECRET`
 
-- [ ] Cloudinary credentials added
+- [x] Cloudinary credentials added
 
 ---
 
@@ -857,8 +857,8 @@ cat .gitignore | grep .env
 
 **Expected:** `.env.local` exists but NOT staged for commit
 
-- [ ] `.env.local` file complete with all credentials
-- [ ] `.env.local` confirmed in `.gitignore`
+- [x] `.env.local` file complete with all credentials
+- [x] `.env.local` confirmed in `.gitignore`
 
 **⚠️ NEVER commit `.env.local` to Git**
 
@@ -1047,10 +1047,10 @@ ORDER BY table_name;
  users        |           5
 ```
 
-- [ ] Database schema executed successfully
-- [ ] 5 tables created
-- [ ] RLS policies enabled
-- [ ] Triggers created
+- [x] Database schema executed successfully
+- [x] 5 tables created
+- [x] RLS policies enabled
+- [x] Triggers created
 
 ---
 
@@ -1060,8 +1060,8 @@ ORDER BY table_name;
 2. You should see: `users`, `stores`, `products`, `orders`, `order_items`
 3. Click each table to see the structure
 
-- [ ] All tables visible in Table Editor
-- [ ] Column structure looks correct
+- [x] All tables visible in Table Editor
+- [x] Column structure looks correct
 
 ---
 
@@ -1088,8 +1088,8 @@ Next steps:
 - `prisma/schema.prisma`
 - `.env` (but we're using `.env.local`)
 
-- [ ] Prisma initialized
-- [ ] `prisma/schema.prisma` created
+- [x] Prisma initialized
+- [x] `prisma/schema.prisma` created
 
 ---
 
@@ -1191,7 +1191,7 @@ model OrderItem {
 }
 ```
 
-- [ ] Prisma schema configured
+- [x] Prisma schema configured
 
 ---
 
@@ -1211,7 +1211,7 @@ import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 ```
 
-- [ ] Prisma Client generated
+- [x] Prisma Client generated
 
 ---
 
@@ -1240,7 +1240,7 @@ if (process.env.NODE_ENV !== 'production') {
 - Logs queries in development for debugging
 - Production-safe singleton pattern
 
-- [ ] Prisma client singleton created
+- [x] Prisma client singleton created
 
 ---
 
@@ -1305,8 +1305,8 @@ npm run dev
 }
 ```
 
-- [ ] Database connection test route created
-- [ ] Connection test successful
+- [x] Database connection test route created
+- [x] Connection test successful
 
 ---
 
@@ -1341,7 +1341,7 @@ src/
 └── types/
 ```
 
-- [ ] Core directories created
+- [x] Core directories created
 
 ---
 
@@ -1423,7 +1423,7 @@ export interface CreateOrderInput {
 }
 ```
 
-- [ ] Type definitions created
+- [x] Type definitions created
 
 ---
 

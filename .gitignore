@@ -45,7 +45,13 @@ next-env.d.ts
 
 # Prisma
 prisma/migrations/
+prisma/dev.db
+prisma/dev.db-journal
 
-# Pllaning files
+# Planning files
 shopify-clone-project-plan-v2.md
 project-state.md
+
+test-files
+
+/src/generated/prisma
