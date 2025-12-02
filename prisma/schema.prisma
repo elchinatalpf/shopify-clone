@@ -1,0 +1,93 @@
+// Prisma Schema for Shopify Clone
+// Matches the Supabase database schema created in Phase 1
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model User {
+  id           Int       @id @default(autoincrement())
+  auth0UserId  String    @unique @map("auth0_user_id")
+  email        String    @unique
+  name         String?
+  createdAt    DateTime  @default(now()) @map("created_at")
+  updatedAt    DateTime  @updatedAt @map("updated_at")
+
+  stores       Store[]
+
+  @@map("users")
+}
+
+model Store {
+  id          Int       @id @default(autoincrement())
+  userId      Int       @map("user_id")
+  storeName   String    @map("store_name")
+  storeSlug   String    @unique @map("store_slug")
+  subdomain   String?   @unique
+  description String?
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  products    Product[]
+  orders      Order[]
+
+  @@map("stores")
+}
+
+model Product {
+  id            Int       @id @default(autoincrement())
+  storeId       Int       @map("store_id")
+  stockQuantity Int       @default(0) @map("stock_quantity")
+  name          String
+  description   String?
+  price         Decimal   @db.Decimal(10, 2)
+  imageUrls     Json      @default("[]") @map("image_urls")
+  status        String    @default("draft")
+  createdAt     DateTime  @default(now()) @map("created_at")
+  updatedAt     DateTime  @updatedAt @map("updated_at")
+
+  store         Store     @relation(fields: [storeId], references: [id], onDelete: Cascade)
+  orderItems    OrderItem[]
+
+  @@map("products")
+}
+
+model Order {
+  id              Int       @id @default(autoincrement())
+  storeId         Int       @map("store_id")
+  customerName    String    @map("customer_name")
+  customerEmail   String    @map("customer_email")
+  shippingAddress Json      @map("shipping_address")
+  totalAmount     Decimal   @db.Decimal(10, 2) @map("total_amount")
+  status          String    @default("pending")
+  createdAt       DateTime  @default(now()) @map("created_at")
+  updatedAt       DateTime  @updatedAt @map("updated_at")
+
+  store           Store     @relation(fields: [storeId], references: [id], onDelete: Cascade)
+  orderItems      OrderItem[]
+
+  @@map("orders")
+}
+
+model OrderItem {
+  id               Int      @id @default(autoincrement())
+  orderId          Int      @map("order_id")
+  productId        Int      @map("product_id")
+  productName      String   @map("product_name")
+  quantity         Int
+  priceAtPurchase  Decimal  @db.Decimal(10, 2) @map("price_at_purchase")
+  createdAt        DateTime @default(now()) @map("created_at")
+
+  order            Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  product          Product  @relation(fields: [productId], references: [id])
+
+  @@map("order_items")
+}
